@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="auto">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#39d353"><animate attributeName="stop-color" values="#39d353;#58a6ff;#39d353" dur="4s" repeatCount="indefinite"/></stop>
+      <stop offset="100%" stop-color="#58a6ff"><animate attributeName="stop-color" values="#58a6ff;#39d353;#58a6ff" dur="4s" repeatCount="indefinite"/></stop>
+    </linearGradient>
+  </defs>
+  <style>
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+    @keyframes float{0%,100%{transform:translateY(0px)}50%{transform:translateY(-10px)}}
+    @keyframes scan{0%{transform:translateY(-300px)}100%{transform:translateY(300px)}}
+    @keyframes glowPulse{0%,100%{opacity:0.6}50%{opacity:1}}
+    @keyframes chartPulse{0%,100%{opacity:0.3}50%{opacity:0.65}}
+    @keyframes twinkle{0%,100%{opacity:0.1}50%{opacity:0.6}}
+    .bl{animation:blink 1.2s step-end infinite}
+    .fl{animation:float 5s ease-in-out infinite}
+    .sc{animation:scan 4s linear infinite}
+    .gp{animation:glowPulse 2s ease-in-out infinite}
+    .cp{animation:chartPulse 2s ease-in-out infinite}
+    .tw{animation:twinkle 3s ease-in-out infinite}
+  </style>
+
+  <rect width="800" height="300" fill="#0d1117" rx="10"/>
+  <rect width="800" height="300" fill="none" stroke="#21262d" stroke-width="1" rx="10"/>
+
+  <line x1="0" y1="0" x2="800" y2="0" stroke="#39d353" stroke-width="1" opacity="0.06" class="sc"/>
+
+  <circle cx="30" cy="25" r="5" fill="#ff5f57"/>
+  <circle cx="50" cy="25" r="5" fill="#ffbd2e"/>
+  <circle cx="70" cy="25" r="5" fill="#28c840"/>
+
+  <text x="100" y="30" fill="#8b949e" font-family="'Courier New',monospace" font-size="13">krsnaSuraj@github:~/profile</text>
+
+  <circle cx="120" cy="240" r="1.5" fill="#39d353" class="fl"/>
+  <circle cx="200" cy="60" r="1.5" fill="#39d353" class="fl" style="animation-delay:1s"/>
+  <circle cx="380" cy="260" r="1" fill="#58a6ff" class="fl" style="animation-delay:.5s"/>
+  <circle cx="550" cy="70" r="1.5" fill="#39d353" class="fl" style="animation-delay:2s"/>
+  <circle cx="680" cy="220" r="1" fill="#58a6ff" class="fl" style="animation-delay:1.5s"/>
+  <circle cx="740" cy="50" r="1" fill="#39d353" class="fl" style="animation-delay:3s"/>
+  <circle cx="90" cy="90" r="1" fill="#ffbd2e" class="fl" style="animation-delay:0.7s"/>
+  <circle cx="350" cy="40" r="1.2" fill="#39d353" class="fl" style="animation-delay:2.5s"/>
+  <circle cx="620" cy="250" r="1.5" fill="#58a6ff" class="fl" style="animation-delay:1.2s"/>
+  <circle cx="450" cy="280" r="1" fill="#39d353" class="fl" style="animation-delay:3.5s"/>
+  <circle cx="770" cy="140" r="1" fill="#39d353" class="fl" style="animation-delay:0.3s"/>
+  <circle cx="50" cy="40" r="1" fill="#58a6ff" class="tw" style="animation-delay:0.5s"/>
+  <circle cx="700" cy="90" r="1.2" fill="#39d353" class="tw" style="animation-delay:1.8s"/>
+  <circle cx="300" cy="250" r="0.8" fill="#58a6ff" class="tw" style="animation-delay:2.2s"/>
+
+  <text x="50" y="120" fill="#39d353" font-family="'Courier New',monospace" font-size="16">krsnaSuraj@github:<tspan fill="#58a6ff">~</tspan>$ <tspan fill="#8b949e">cat profile.md</tspan></text>
+
+  <text x="50" y="170" fill="url(#nameGrad)" font-family="'Courier New',monospace" font-size="32" font-weight="bold" filter="url(#glow)" class="gp">krsnaSuraj</text>
+
+  <text x="50" y="200" fill="#8b949e" font-family="'Courier New',monospace" font-size="14">Developer · Open Source</text>
+
+  <rect x="50" y="218" width="200" height="4" fill="#21262d" rx="2"/>
+  <rect x="50" y="218" height="4" fill="#39d353" rx="2" opacity="0.8">
+    <animate attributeName="width" values="0;130;160;145;200" dur="5s" repeatCount="indefinite"/>
+  </rect>
+
+  <polyline points="280,245 300,245 320,238 340,252 360,235 380,248 400,232 420,245 440,238 460,250 480,245 500,245" fill="none" stroke="#39d353" stroke-width="1.5" opacity="0.35" class="cp"/>
+  <polyline points="280,250 300,250 320,248 340,253 360,247 380,251 400,246 420,250 440,248 460,252 480,250 500,250" fill="none" stroke="#58a6ff" stroke-width="1" opacity="0.2" class="cp" style="animation-delay:0.5s"/>
+
+  <rect x="50" y="240" width="10" height="18" fill="#39d353" class="bl"/>
+
+  <text x="750" y="285" fill="#21262d" font-family="'Courier New',monospace" font-size="11" text-anchor="end">README.md</text>
+</svg>
